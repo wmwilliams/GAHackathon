@@ -2,6 +2,7 @@ var express         = require('express');
 var mongoose        = require('mongoose');
 var request         = require('request');
 var _               = require('lodash');
+var path 			= require('path');
 
 var app = express();
 
@@ -11,6 +12,8 @@ mongoose.connection.once('open', function(){
 
   //Load DB models
   app.models = require('./models/index');
+
+  app.use(express.static(path.join(__dirname, 'client')));
 
   // Load the routes.
   var routes = require('./routes');
