@@ -3,12 +3,13 @@
  */
 var express = require('express'),
   $       = require('cheerio'),
+  db      = require('../models/index'),
   request = require('request'),
   router  = express.Router();
 
 router.get('/', function(req, res){
 
-  var url = "http://www.brainyquote.com/quotes/authors/d/donald_trump.html";
+  var url = "http://www.brainyquote.com/quotes/authors/b/barack_obama.html";
 
   request(url, function(err, response, html){
     if(!err && response.statusCode == 200){
@@ -29,6 +30,15 @@ router.get('/', function(req, res){
           return;
       });
 
+      quoteArray.forEach(function(quote){
+        var newQuote = db.Quote({
+          quote: quote
+        })
+
+        newQuote.save(function(err) {
+          if (err) console.log(err);
+        });
+      })
 
       res.send({author: author, quotes: quoteArray})
     } else {
