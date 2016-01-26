@@ -6,7 +6,7 @@ module.exports = {
 
   '/api/images' : require('./controllers/Image'),
 
-  './api/quotes': require('./controllers/Quotes'),
+  '/api/quotes': require('./controllers/Quotes'),
 
   '/api/brainyQuoteScrape' : require('./scrapers/brainyQuoteScraper')
 
