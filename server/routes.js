@@ -8,7 +8,9 @@ module.exports = {
 
   '/api/quotes': require('./controllers/Quotes'),
 
-  '/api/brainyQuoteScrape' : require('./scrapers/brainyQuoteScraper')
+  '/api/brainyQuoteScrape' : require('./scrapers/brainyQuoteScraper'),
+
+  '/api/peopleScrape'   : require('./scrapers/peopleScraper')
 
 
 };
