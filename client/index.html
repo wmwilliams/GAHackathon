@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html ng-app="HackathonApp">
 <head>
-	<title></title>
+	<title>Quotable</title>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-resource.js"></script>
-  <script src="app/app.js"></script>
   <script src="app/controllers.js"></script>
+  <script src="app/app.js"></script>
 
 </head>
 <body>
-<ng-view></ng-view>
+<div ng-include="'app/views/navbar.html'"></div>
+<div class="col-md-10 col-md-offset-1">
+  <ng-view></ng-view>
+</div>
 </body>
 </html>
