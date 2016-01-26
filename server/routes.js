@@ -10,9 +10,16 @@ module.exports = {
 
   '/api/brainyQuoteScrape' : require('./scrapers/brainyQuoteScraper'),
 
+<<<<<<< HEAD
   '/api/peopleScrape'   : require('./scrapers/peopleScraper'),
 
   '/api/sunnyScrape'  : require('./scrapers/sunnyQuoteScraper')
+=======
+  '/api/pics' : require('./scrapers/picsAPI')
+
+  '/api/peopleScrape'   : require('./scrapers/peopleScraper')
+>>>>>>> 9248f2ebfe3e9559da019fdd7cca1b9e99f56151
+
 
 
 };
