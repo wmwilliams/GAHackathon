@@ -3,7 +3,10 @@ var router = express.Router();
 var db = require('../models/index');
 
 router.get('/', function(req, res){
-  res.send({HI: db.Img_link.img_link });
+  db.Img_link.find(function(err, links) {
+    if (err) return res.status(500).send(err);
+    res.send(links);
+  });
 });
 
 pictureAPI = function() {
