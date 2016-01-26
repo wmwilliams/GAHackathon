@@ -1,19 +1,20 @@
-var app = angular.module('HackathonApp', ['ngRoute', 'HackathonCtrls']);
+var app = angular.module('HackathonApp', ['ngRoute']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 		$routeProvider
 			.when(
 				'/', {
-					templateUrl: 'app/views/random.html', 
+					templateUrl: 'app/views/random.html'
+					//controller: 'HomeCtrl'
 				}
 			)
 			.when (
 				'/show', {
-					templateUrl: 'app/views/show.html',
+					templateUrl: 'app/views/show.html'
 				}
 			).otherwise ({
 				templateUrl: 'app/views/404.html'
 			});
 
-			$locationProvider.html5Moded(true);
+			//$locationProvider.html5Mode(true);
 }]);
