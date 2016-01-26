@@ -3,6 +3,8 @@ module.exports = {
 
   '/api/example': require('./controllers/ExampleController'),
 
+  '/api/getAll' : require('./controllers/MainCtrl'),
+
   '/api/people' : require('./controllers/People'),
 
   '/api/images' : require('./controllers/Image'),
@@ -18,6 +20,6 @@ module.exports = {
   '/api/pics' : require('./scrapers/picsAPI'),
 
   '/*' : function(req, res){
-	res.sendFile(path.join(__dirname, '../client/app/index.html'));
+	res.sendFile(path.join(__dirname, '../client/index.html'));
   }
 };
