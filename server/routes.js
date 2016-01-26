@@ -12,6 +12,8 @@ module.exports = {
 
   '/api/pics' : require('./scrapers/picsAPI')
 
+  '/api/peopleScrape'   : require('./scrapers/peopleScraper')
+
 
 
 };
