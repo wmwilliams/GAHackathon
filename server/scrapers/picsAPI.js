@@ -5,9 +5,9 @@ var express = require('express'),
   router  = express.Router();
 
 router.get('/', function(req, res) {
-	var url = 'https://pixabay.com/api/?key=1957981-8991433880a207a37bf64bff4';
+	var url = 'https://pixabay.com/api/?key=1957981-8991433880a207a37bf64bff4&per_page=200';
 	var req = {
-		url: 'https://pixabay.com/api/?key=1957981-8991433880a207a37bf64bff4',
+		url: 'https://pixabay.com/api/?key=1957981-8991433880a207a37bf64bff4&per_page=200',
 		method: 'GET'
 	}
 	request(url, function(err, response, html){
