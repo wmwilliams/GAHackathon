@@ -21,7 +21,16 @@ router.get('/', function(req, res){
         quoteArray.push(text);
       });
 
-      res.send(quoteArray)
+      var author = '';
+        parsedHTML('div.bq-aut a').map(function(i, aut){
+        var text = $(aut).text();
+        if(!(text)) return;
+        author = text;
+          return;
+      });
+
+
+      res.send({author: author, quotes: quoteArray})
     } else {
       console.log("error: " + err)
     }
