@@ -10,7 +10,9 @@ module.exports = {
 
   '/api/brainyQuoteScrape' : require('./scrapers/brainyQuoteScraper'),
 
-  '/api/peopleScrape'   : require('./scrapers/peopleScraper')
+  '/api/peopleScrape'   : require('./scrapers/peopleScraper'),
+
+  '/api/sunnyScrape'  : require('./scrapers/sunnyQuoteScraper')
 
 
 };
