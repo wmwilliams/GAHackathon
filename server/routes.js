@@ -12,7 +12,8 @@ module.exports = {
 
   '/api/peopleScrape'   : require('./scrapers/peopleScraper'),
 
-  '/api/sunnyScrape'  : require('./scrapers/sunnyQuoteScraper')
+  '/api/sunnyScrape'  : require('./scrapers/sunnyQuoteScraper'),
 
+  '/api/pics' : require('./scrapers/picsAPI')
 
 };
