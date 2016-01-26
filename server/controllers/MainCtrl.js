@@ -30,36 +30,16 @@ router.get('/', function(req, res){
     db.Img_link.find({}, function(err, imgLinks){
       if (err) console.log(err);
       PQI.imageLinks = imgLinks;
-      return true;
+      res.send(PQI)
     })
   };
 
   async.series([
-      function(PQI) {
-        db.People.find({}, function(err, people){
-          if (err) console.log(err);
-          PQI.people = people;
-          return true;
-        })
-      },
-      function(PQI) {
-        db.Quote.find({}, function(err, quotes){
-          if (err) console.log(err);
-          PQI.quotes = quotes;
-          return true;
-        })
-      },
-      function(PQI) {
-        db.Img_link.find({}, function(err, imgLinks){
-          if (err) console.log(err);
-          PQI.imageLinks = imgLinks;
-          return true;
-        })
-      }
-  ],
+    getPeople(PQI),
+    getQuotes(PQI),
+    getImages(PQI)],
     function(err, results){
       if (err) console.log("error: " + err);
-      res.send(PQI);
   });
 
 
