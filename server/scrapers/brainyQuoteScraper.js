@@ -40,6 +40,14 @@ router.get('/', function(req, res){
         });
       })
 
+      var newAuthor = db.People({
+        full_name: author
+      });
+
+      newAuthor.save(function(err){
+        if(err) console.log(err)
+      })
+
       res.send({author: author, quotes: quoteArray})
     } else {
       console.log("error: " + err)
