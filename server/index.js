@@ -6,7 +6,7 @@ var _               = require('lodash');
 var app = express();
 
 
-mongoose.connect('mongodb://localhost/watch_it');
+mongoose.connect('mongodb://localhost/gahackathon');
 mongoose.connection.once('open', function(){
 
   //Load DB models
