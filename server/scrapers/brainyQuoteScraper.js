@@ -9,7 +9,7 @@ var express = require('express'),
 
 router.get('/', function(req, res){
 
-  var url = "http://www.brainyquote.com/quotes/authors/b/barack_obama.html";
+  var url = "http://www.brainyquote.com/quotes/authors/d/donald_trump.html";
 
   request(url, function(err, response, html){
     if(!err && response.statusCode == 200){
