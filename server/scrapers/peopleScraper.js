@@ -7,18 +7,24 @@ var express = require('express'),
   request = require('request'),
   router  = express.Router();
 
-router.get('/', function(req, res){
+router.get('/:id', function(req, res){
+  var idx = req.params.id;
 
-  var url = "http://www.biographyonline.net/people/famous/leaders.html";
+  var url = {
+    1: "http://www.biographyonline.net/people/famous/leaders.html",
+    2: "http://www.biographyonline.net/people/famous/great-thinkers.html",
+    3: "http://www.biographyonline.net/people/famous/socialists.html",
+    4: "http://www.biographyonline.net/military/top-10-military-leaders.html",
+    5: "http://www.biographyonline.net/people/famous/revolutionaries.html"
+  };
 
-  request(url, function(err, response, html){
+  request(url[idx], function(err, response, html){
     if(!err && response.statusCode == 200){
       var parsedHTML = $.load(html);
 
-
       //Save people
       var people = [];
-      parsedHTML('p a strong').map(function(i, p){
+      parsedHTML('#content p a strong').map(function(i, p){
         var person = $(p).text();
         if(!(person)) return;
         people.push(person);
