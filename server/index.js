@@ -13,7 +13,7 @@ mongoose.connection.once('open', function(){
   //Load DB models
   app.models = require('./models/index');
 
-  app.use(express.static(path.join(__dirname, 'client')));
+  app.use(express.static(path.join(__dirname, '../client')));
 
   // Load the routes.
   var routes = require('./routes');

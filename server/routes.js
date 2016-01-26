@@ -18,6 +18,6 @@ module.exports = {
   '/api/pics' : require('./scrapers/picsAPI'),
 
   '/*' : function(req, res){
-	res.sendFile(path.join(__dirname, '../client/app/index.html'));
+	res.sendFile(path.join(__dirname, '../client/index.html'));
   }
 };
