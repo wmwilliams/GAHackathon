@@ -11,12 +11,12 @@ mongoose.connect('mongodb://localhost/gahackathon');
 mongoose.connection.once('open', function(){
 
   //Load DB models
-  app.models = require('./models/index');
+  app.models = require('./server/models/index');
 
   app.use(express.static(path.join(__dirname, 'client')));
 
   // Load the routes.
-  var routes = require('./routes');
+  var routes = require('./server/routes');
   _.each(routes, function(controller, route) {
     app.use(route, controller);
   });
