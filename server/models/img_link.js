@@ -4,7 +4,7 @@ var imgSchema = new mongoose.Schema({
 	img_link: String
 });
 
-// var People = mongoose.model('People, peopleSchema');
+var Img_link = mongoose.model('Img_link', imgSchema);
 
 // make this available to our other files
-module.exports = imgSchema;
+module.exports = Img_link;
