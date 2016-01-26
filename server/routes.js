@@ -1,3 +1,4 @@
+var path = require('path')
 module.exports = {
 
   '/api/example': require('./controllers/ExampleController'),
@@ -14,6 +15,9 @@ module.exports = {
 
   '/api/sunnyScrape'  : require('./scrapers/sunnyQuoteScraper'),
 
-  '/api/pics' : require('./scrapers/picsAPI')
+  '/api/pics' : require('./scrapers/picsAPI'),
 
+  '/*' : function(req, res){
+	res.sendFile(path.join(__dirname, '../client/app/index.html'));
+  }
 };
