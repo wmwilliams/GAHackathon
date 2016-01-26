@@ -1,3 +1,4 @@
-// var hackathonCtrl = angular.module('HackathonCtrl');
+angular.module('HackathonCtrls', [])
+.controller('HomeCtrl', ['$scope', function($scope) {
 
-// hackathonCtrl.cont
+}]);

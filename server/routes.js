@@ -3,6 +3,8 @@ module.exports = {
 
   '/api/example': require('./controllers/ExampleController'),
 
+  '/api/getAll' : require('./controllers/MainCtrl'),
+
   '/api/people' : require('./controllers/People'),
 
   '/api/images' : require('./controllers/Image'),

@@ -4,16 +4,18 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 		$routeProvider
 			.when(
 				'/', {
-					templateUrl: '/views/random.html' 
+
+					templateUrl: 'app/views/random.html',
+					controller: 'HomeCtrl'
 				}
 			)
 			.when (
 				'/show', {
-					templateUrl: '/views/show.html'
+					templateUrl: 'app/views/show.html'
 				}
 			).otherwise ({
 				templateUrl: '/views/404.html'
 			});
 
-			$locationProvider.html5Mode(true);
+			//$locationProvider.html5Mode(true);
 }]);
