@@ -1,4 +1,4 @@
-angular.module('HackathonCtrls')
+angular.module('HackathonCtrls', [])
 .controller('HomeCtrl', ['$scope', function($scope) {
-
+	
 }]);
