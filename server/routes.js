@@ -2,6 +2,8 @@ module.exports = {
 
   '/api/example': require('./controllers/ExampleController'),
 
+  '/api/getAll' : require('./controllers/MainCtrl'),
+
   '/api/people' : require('./controllers/People'),
 
   '/api/images' : require('./controllers/Image'),
@@ -11,6 +13,4 @@ module.exports = {
   '/api/brainyQuoteScrape' : require('./scrapers/brainyQuoteScraper'),
 
   '/api/peopleScrape'   : require('./scrapers/peopleScraper')
-
-
 };
