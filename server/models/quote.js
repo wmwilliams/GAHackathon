@@ -7,4 +7,7 @@ var quoteSchema = new mongoose.Schema({
 // var People = mongoose.model('People, peopleSchema');
 
 // make this available to our other files
-module.exports = quoteSchema;
+
+var Quote = mongoose.model('Quote', quoteSchema);
+
+module.exports = Quote;
