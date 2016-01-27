@@ -10,6 +10,7 @@ angular.module('HackathonCtrls', ['DataServices'])
 
       var randQuote = Math.floor((Math.random() * data.quotes.length) + 1);
       $scope.quote = data.quotes[randQuote];
+      console.log($scope.quote);
 
       var randImage = Math.floor((Math.random() * data.imageLinks.length) + 1);
       $scope.image = data.imageLinks[randImage];
@@ -17,7 +18,7 @@ angular.module('HackathonCtrls', ['DataServices'])
     },
     function error(data){
       console.log(data)
-    })
+    });
   $scope.clickMe = function () {
       AllData.get(
       function success(data, stuff){
