@@ -17,20 +17,28 @@ router.get('/', function(req, res){
       parsedHTML('.quote p').each(function (i, quote) {
         var text = $(quote).text();
         if (!(text)) return;
-        splitText = text.split("  ");
-        console.log(text);
-
+        var splitText = text.split(/.*?:(.*)/);
+        quoteArray.push(splitText[2]);
+        for(var i = 0; i < quoteArray.length; i ++){
+          if (quoteArray[i] === undefined){
+            quoteArray.splice(i, 1);
+          }
+          else {
+            quoteArray[i] = quoteArray[i].replace('\n', '');
+          }
+        }
+        console.log(quoteArray);
       });
 
-      //quoteArray.forEach(function(quote){
-      //  var newQuote = db.Quote({
-      //    quote: quote
-      //  });
-      //
-      //  newQuote.save(function(err) {
-      //    if (err) console.log(err);
-      //  });
-      //});
+      quoteArray.forEach(function(quote){
+        var newQuote = db.Quote({
+          quote: quote
+        });
+
+        newQuote.save(function(err) {
+          if (err) console.log(err);
+        });
+      });
     }
   });
 
