@@ -1,4 +1,6 @@
-angular.module('HackathonCtrls', [])
-.controller('HomeCtrl', ['$scope', function($scope) {
-	
-}]);
+angular.module('HackathonCtrls', ['DataServices'])
+.controller('HomeCtrl', ['$scope', 'AllData', function($scope, AllData) {
+	$scope.people = AllData;
+	console.log($scope)
+}])
+
