@@ -1,8 +1,6 @@
 var path = require('path')
 module.exports = {
 
-  '/api/example': require('./controllers/ExampleController'),
-
   '/api/getAll' : require('./controllers/MainCtrl'),
 
   '/api/people' : require('./controllers/People'),
