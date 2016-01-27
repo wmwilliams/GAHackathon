@@ -13,7 +13,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 					templateUrl: 'app/views/show.html'
 				}
 			).otherwise ({
-				templateUrl: '/views/404.html'
+				templateUrl: 'views/404.html'
 			});
 
 			//$locationProvider.html5Mode(true);
