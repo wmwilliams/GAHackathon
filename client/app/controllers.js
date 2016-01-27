@@ -19,4 +19,3 @@ angular.module('HackathonCtrls', ['DataServices'])
       console.log(data)
     });
 }]);
-
