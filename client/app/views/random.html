@@ -1,17 +1,20 @@
 
-<div class="img-holder">
-	<img src="http://pngimg.com/upload/tv_PNG474.png">
-	<div class="content">
-
-
+<div class="title col-md-8 col-md-offset-2 text-center">Forgotten Quotes
 </div>
-	<div class='well' ng-click='clickMe()'>
-		<img ng-src="{{image.img_link}}">
-		<p>{{quote.quote}}</p>
-		<h4>{{person.full_name}}</h4>
+<div class="img-holder col-md-8 col-md-offset-2 text-center" ng-click='clickMe()' >
+		<div class='quote'>
+				<div class="text">
+					<p>"{{quote.quote}}"</p>
+					<h4>{{person.full_name}}</h4>
+				</div>
 		</div>
+		<img id="tv" src="{{image.img_link}}">
 </div>
-</div>	
+
+
+
+
+	
 
 
 
