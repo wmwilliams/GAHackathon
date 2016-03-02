@@ -6,8 +6,8 @@ var path 			      = require('path');
 
 var app = express();
 
-
-mongoose.connect('mongodb://ga-hackathon:ga@ds051585.mongolab.com:51585/heroku_6spv5l5r');
+mongoose.connect('mongodb://root1:password@ds019668.mlab.com:19668/gahackday')
+// mongoose.connect('mongodb://ga-hackathon:ga@ds051585.mongolab.com:51585/heroku_6spv5l5r');
 // mongoose.connect('mongodb://localhost/gahackathon');
 mongoose.connection.once('open', function(){
 
