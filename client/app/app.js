@@ -16,5 +16,5 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 				templateUrl: 'app/views/404.html'
 			});
 
-			$locationProvider.html5Mode(true);
+			// $locationProvider.html5Mode(true);
 }]);
