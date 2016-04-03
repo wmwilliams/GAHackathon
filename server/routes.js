@@ -1,13 +1,13 @@
 var path = require('path')
 module.exports = {
 
-  // '/api/getAll' : require('./controllers/MainCtrl'),
+  '/api/getAll' : require('./controllers/MainCtrl'),
 
-  // '/api/people' : require('./controllers/People'),
+  '/api/people' : require('./controllers/People'),
 
-  // '/api/images' : require('./controllers/Image'),
+  '/api/images' : require('./controllers/Image'),
 
-  // '/api/quotes': require('./controllers/Quotes'),
+  '/api/quotes': require('./controllers/Quotes'),
 
   '/api/brainyQuoteScrape' : require('./scrapers/brainyQuoteScraper'),
 
