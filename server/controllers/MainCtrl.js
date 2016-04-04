@@ -17,7 +17,6 @@ router.get('/', function(req, res){
 
       db.Quote.find({}, function(err, quotes){
         if (err) console.log(err);
-        if (quotes) console.log(quotes);
         PQI.quotes = quotes;
       });
 
