@@ -3,6 +3,7 @@
 	font-size: 250%
 }
 .img-holder {
+
 	position: relative;
 }
 
@@ -16,7 +17,6 @@
 .quote .text p {
 	font-size: 180%;
 	font-family: 'Amaranth', sans-serif;
-	color: ;
 }
 
 .img-holder img {

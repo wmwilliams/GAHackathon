@@ -10,37 +10,32 @@ router.get('/', function(req, res){
 
   var PQI = {};
 
-  async.series([
-  function (callback) {
-    db.People.find({}, function(err, people){
-      if (err) console.log(err);
-      PQI.people = people;
-      return true;
-      callback();
-    })
-  },
+      db.People.find({}, function(err, people){
+        if (err) console.log(err);
+        PQI.people = people;
+      });
 
-  function (callback) {
-    db.Quote.find({}, function(err, quotes){
-      if (err) console.log(err);
-      PQI.quotes = quotes;
-      return true;
-      callback();
-    })
-  },
+      db.Quote.find({}, function(err, quotes){
+        if (err) console.log(err);
+        if (quotes) console.log(quotes);
+        PQI.quotes = quotes;
+      });
 
-  function (callback) {
-    db.Img_link.find({}, function(err, imgLinks){
-      if (err) console.log(err);
-      PQI.imageLinks = imgLinks;
-      res.send(PQI)
-    })
-  }
-  ],
-  function(err, results){
-      if (err) console.log("error: " + err);
-  })
+      db.Img_link.find({}, function(err, imgLinks){
+        if (err) console.log(err);
+        PQI.imageLinks = imgLinks;
+        console.log(PQI);
+        return res.send(PQI);
+      });
 
+
+
+  //   getPeople(PQI),
+  //   getQuotes(PQI),
+  //   getImages(PQI)],
+  //   function(err, results){
+  //     if (err) console.log("error: " + err);
+  // });
 
 
 });

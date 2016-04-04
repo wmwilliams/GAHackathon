@@ -1,4 +1,4 @@
-	var app = angular.module('HackathonApp', ['ngRoute', 'HackathonCtrls']);
+var app = angular.module('HackathonApp', ['ngRoute', 'HackathonCtrls']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 		$routeProvider
@@ -13,8 +13,8 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 					templateUrl: 'app/views/show.html'
 				}
 			).otherwise ({
-				templateUrl: 'app/views/404.html'
+				templateUrl: 'views/404.html'
 			});
 
-			// $locationProvider.html5Mode(true);
+			//$locationProvider.html5Mode(true);
 }]);
