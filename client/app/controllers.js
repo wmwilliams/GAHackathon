@@ -29,7 +29,6 @@ angular.module('HackathonCtrls', ['DataServices'])
         var randImage = Math.floor((Math.random() * data.imageLinks.length) + 1);
         $scope.image = data.imageLinks[randImage];
 
-        console.log(data.quotes.length);
         var randQuote = Math.floor((Math.random() * data.quotes.length) + 1);
         $scope.quote = data.quotes[randQuote];
       },
