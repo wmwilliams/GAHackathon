@@ -14,16 +14,17 @@ router.get('/', function(req, res){
     PQI.people = people;
   });
 
+  db.Quote.find({}, function(err, quotes){
+    if (err) console.log(err);
+    PQI.quotes = quotes;
+  });
+
   db.Img_link.find({}, function(err, imgLinks){
     if (err) console.log(err);
     PQI.imageLinks = imgLinks;
     return res.send(PQI);
   });
 
-  db.Quote.find({}, function(err, quotes){
-    if (err) console.log(err);
-    PQI.quotes = quotes;
-  });
 });
 
 module.exports = router;
