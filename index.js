@@ -7,8 +7,8 @@ var path 			      = require('path');
 var app = express();
 
 
-mongoose.connect('process.env.MONGO_URI');
-console.log(process.env.MONGO_URI);
+mongoose.connect('mongodb://root1:password@ds019668.mlab.com:19668/gahackday');
+
 // mongoose.connect('mongodb://localhost:27017/gahackathon');
 
 mongoose.connection.once('open', function(){
