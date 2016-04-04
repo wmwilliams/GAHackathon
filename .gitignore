@@ -1,5 +1,5 @@
 *.idea
 node_modules
 Procfile
+.env
 *.DS_Store
-MOGNO_URI='mongodb://root1:password@ds019668.mlab.com:19668/gahackday'
