@@ -8,7 +8,7 @@ var db = require('../models/index');
 router.get('/', function(req, res){
 
   var PQI = {};
-  function beginQuote() {
+
     db.People.find({}, function(err, people){
       if (err) console.log(err);
       PQI.people = people;
@@ -22,10 +22,9 @@ router.get('/', function(req, res){
     db.Img_link.find({}, function(err, imgLinks){
       if (err) console.log(err);
       PQI.imageLinks = imgLinks;
+      return res.send(PQI);
     });
-    return res.send(PQI);
-  };
-  beginQuote();
+
 });
 
 module.exports = router;

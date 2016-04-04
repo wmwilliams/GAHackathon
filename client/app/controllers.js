@@ -13,6 +13,7 @@ angular.module('HackathonCtrls', ['DataServices'])
 
       var randQuote = Math.floor((Math.random() * data.quotes.length) + 1);
       $scope.quote = data.quotes[randQuote];
+      console.log(data.quotes.length);
     },
     function error(data){
       console.log('alldata get failure');
