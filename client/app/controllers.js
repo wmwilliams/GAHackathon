@@ -10,12 +10,30 @@ angular.module('HackathonCtrls', ['DataServices'])
       $scope.data.quotes = jsonData.quotes;
       $scope.data.imageLinks = jsonData.imageLinks;
 
-      if($scope.data.people.length <= 10 || $scope.data.quotes <= 10 || $scope.data.imageLinks <= 10) {
+      if(!$scope.data.people.length)  {
         AllData.get(
           function success(data, stuff){
             var jsonData = angular.fromJson(data);
             $scope.data.people = jsonData.people;
+          },
+          function error(data) {
+            console.log(data);
+          }
+        )
+      } else if(!$scope.data.quotes) {
+        AllData.get(
+          function success(data, stuff){
+            var jsonData = angular.fromJson(data);
             $scope.data.quotes = jsonData.quotes;
+          },
+          function error(data) {
+            console.log(data);
+          }
+        )
+      } else if(!$scope.data.imageLinks) {
+        AllData.get(
+          function success(data, stuff){
+            var jsonData = angular.fromJson(data);
             $scope.data.imageLinks = jsonData.imageLinks;
           },
           function error(data) {
@@ -23,7 +41,6 @@ angular.module('HackathonCtrls', ['DataServices'])
           }
         )
       } else {
-
         var randPerson = Math.floor((Math.random() * $scope.data.people.length) + 1);
         $scope.person = $scope.data.people[randPerson];
 
@@ -34,10 +51,10 @@ angular.module('HackathonCtrls', ['DataServices'])
         $scope.image = $scope.data.imageLinks[randImage];
       }
     },
-    function error(data){
-      console.log(data)
+    function error(data) {
+      console.log(data);
     }
-  );
+  )
 
   $scope.clickMe = function () {
       var randPerson = Math.floor((Math.random() * $scope.data.people.length) + 1);
