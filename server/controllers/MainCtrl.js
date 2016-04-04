@@ -10,7 +10,7 @@ router.get('/', function(req, res){
 
   var PQI = {};
 
-  var getPeople = function(PQI) {
+  function getPeople(PQI) {
     db.People.find({}, function(err, people){
       if (err) console.log(err);
       PQI.people = people;
@@ -18,7 +18,7 @@ router.get('/', function(req, res){
     })
   };
 
-  var getQuotes = function(PQI) {
+  function getQuotes(PQI) {
     db.Quote.find({}, function(err, quotes){
       if (err) console.log(err);
       PQI.quotes = quotes;
@@ -26,7 +26,7 @@ router.get('/', function(req, res){
     })
   };
 
-  var getImages = function(PQI) {
+  function getImages(PQI) {
     db.Img_link.find({}, function(err, imgLinks){
       if (err) console.log(err);
       PQI.imageLinks = imgLinks;
