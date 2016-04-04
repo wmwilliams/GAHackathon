@@ -8,13 +8,12 @@ angular.module('HackathonCtrls', ['DataServices'])
       var randPerson = Math.floor((Math.random() * data.people.length) + 1);
       $scope.person = data.people[randPerson];
 
-      var randQuote = Math.floor((Math.random() * data.quotes.length) + 1);
-      $scope.quote = data.quotes[randQuote];
-      console.log($scope.quote);
-
       var randImage = Math.floor((Math.random() * data.imageLinks.length) + 1);
       $scope.image = data.imageLinks[randImage];
 
+      var randQuote = Math.floor((Math.random() * data.quotes.length) + 1);
+      $scope.quote = data.quotes[randQuote];
+      console.log($scope.quote);
     },
     function error(data){
       console.log('alldata get failure');
@@ -28,12 +27,11 @@ angular.module('HackathonCtrls', ['DataServices'])
         var randPerson = Math.floor((Math.random() * data.people.length) + 1);
         $scope.person = data.people[randPerson];
 
-        var randQuote = Math.floor((Math.random() * data.quotes.length) + 1);
-        $scope.quote = data.quotes[randQuote];
-
         var randImage = Math.floor((Math.random() * data.imageLinks.length) + 1);
         $scope.image = data.imageLinks[randImage];
 
+        var randQuote = Math.floor((Math.random() * data.quotes.length) + 1);
+        $scope.quote = data.quotes[randQuote];
       },
       function error(data){
         console.log(data)
