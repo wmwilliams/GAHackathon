@@ -5,7 +5,7 @@ angular.module('HackathonCtrls', ['DataServices'])
 	AllData.get(
     function success(data, stuff){
 
-      var randPerson = Math.floor((Math.random() * data.people.length) + 1);
+      var randPerson = Math.floor((Math.random() * data.people.length + 1) + 1);
       $scope.person = data.people[randPerson];
 
       var randQuote = Math.floor((Math.random() * data.quotes.length) + 1);
