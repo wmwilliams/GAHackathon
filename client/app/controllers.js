@@ -44,7 +44,7 @@ angular.module('HackathonCtrls', ['DataServices'])
             console.log(data);
           }
         )
-      } else {
+      } else if ($scope.data.imageLinks && $scope.data.people && $scope.data.quotes){
         var randPerson = Math.floor((Math.random() * $scope.data.people.length) + 1);
         $scope.person = $scope.data.people[randPerson];
 
