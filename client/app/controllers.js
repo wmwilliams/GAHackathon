@@ -9,7 +9,7 @@ angular.module('HackathonCtrls', ['DataServices'])
       var jsonData = angular.fromJson(data);
       $scope.data.people = jsonData.people;
       $scope.data.quotes = jsonData.quotes;
-      $scope.data.imgLinks = jsonData.imageLinks;
+      $scope.data.imageLinks = jsonData.imageLinks;
 
       var randPerson = Math.floor((Math.random() * $scope.data.people.length) + 1);
       $scope.person = $scope.data.people[randPerson];
