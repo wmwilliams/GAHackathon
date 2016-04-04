@@ -24,7 +24,7 @@ angular.module('HackathonCtrls', ['DataServices'])
       console.log(data)
     });
   $scope.clickMe = function () {
-      if($scope.data.people.length !> 10 || $scope.data.quotes !> 10 || $scope.data.imageLinks !> 10) {
+      if($scope.data.people.length <= 10 || $scope.data.quotes <= 10 || $scope.data.imageLinks <= 10) {
         AllData.get(
           function success(data, stuff){
 
