@@ -10,7 +10,7 @@ angular.module('HackathonCtrls', ['DataServices'])
       $scope.data.quotes = jsonData.quotes;
       $scope.data.imageLinks = jsonData.imageLinks;
 
-      if(!$scope.data.people.length)  {
+      if(!$scope.data.people)  {
         AllData.get(
           function success(data, stuff){
             var jsonData = angular.fromJson(data);
