@@ -2,3 +2,4 @@
 node_modules
 Procfile
 *.DS_Store
+MOGNO_URI='mongodb://root1:password@ds019668.mlab.com:19668/gahackday'
