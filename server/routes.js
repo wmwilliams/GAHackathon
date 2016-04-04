@@ -9,15 +9,15 @@ module.exports = {
 
   '/api/quotes': require('./controllers/Quotes'),
 
-  '/api/brainyQuoteScrape' : require('./scrapers/brainyQuoteScraper'),
+  // '/api/brainyQuoteScrape' : require('./scrapers/brainyQuoteScraper'),
 
-  '/api/peopleScrape'   : require('./scrapers/peopleScraper'),
+  // '/api/peopleScrape'   : require('./scrapers/peopleScraper'),
 
-  '/api/sunnyScrape'  : require('./scrapers/sunnyQuoteScraper'),
+  // '/api/sunnyScrape'  : require('./scrapers/sunnyQuoteScraper'),
 
-  '/api/tpbScrape' : require('./scrapers/tpbScraper'),
+  // '/api/tpbScrape' : require('./scrapers/tpbScraper'),
 
-  '/api/pics' : require('./scrapers/picsAPI'),
+  // '/api/pics' : require('./scrapers/picsAPI'),
 
   '/' : function(req, res){
 	res.sendFile(path.join(__dirname, '../client/index.html'));
