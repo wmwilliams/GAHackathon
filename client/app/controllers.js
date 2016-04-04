@@ -14,7 +14,7 @@ angular.module('HackathonCtrls', ['DataServices'])
       $scope.data.quotes = jsonData.quotes;
       $scope.data.imageLinks = jsonData.imageLinks;
 
-      if(!$scope.data.people)  {
+      if(!$scope.data.people.length)  {
         AllData.get(
           function success(data, stuff){
             var jsonData = angular.fromJson(data);
@@ -24,7 +24,7 @@ angular.module('HackathonCtrls', ['DataServices'])
             console.log(data);
           }
         )
-      } else if(!$scope.data.quotes) {
+      } else if(!$scope.data.quotes.length) {
         AllData.get(
           function success(data, stuff){
             var jsonData = angular.fromJson(data);
@@ -34,7 +34,7 @@ angular.module('HackathonCtrls', ['DataServices'])
             console.log(data);
           }
         )
-      } else if(!$scope.data.imageLinks) {
+      } else if(!$scope.data.imageLinks.length) {
         AllData.get(
           function success(data, stuff){
             var jsonData = angular.fromJson(data);
