@@ -8,7 +8,7 @@ angular.module('HackathonCtrls', ['DataServices'])
       var randPerson = Math.floor((Math.random() * data.people.length) + 1);
       $scope.person = data.people[randPerson];
 
-      var randQuote = Math.floor((Math.random() * data.quotes.length) + 1);
+      var randQuote = Math.floor((Math.random() * 472) + 1);
       $scope.quote = data.quotes[randQuote];
 
       var randImage = Math.floor((Math.random() * data.imageLinks.length) + 1);
@@ -26,7 +26,7 @@ angular.module('HackathonCtrls', ['DataServices'])
           console.log(data.people.length);
           console.log(randPerson);
 
-          var randQuote = Math.floor((Math.random() * data.quotes.length) + 1);
+          var randQuote = Math.floor((Math.random() * 472) + 1);
           $scope.quote = data.quotes[randQuote];
           console.log(data.quotes.length);
           console.log(randQuote);
