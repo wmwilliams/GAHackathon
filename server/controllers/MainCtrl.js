@@ -22,9 +22,8 @@ router.get('/', function(req, res){
   db.Img_link.find({}, function(err, imgLinks){
     if (err) console.log(err);
     PQI.imageLinks = imgLinks;
-    return res.send(PQI);
   });
-
+  return res.send(PQI);
 });
 
 module.exports = router;
