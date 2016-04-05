@@ -9,21 +9,21 @@ router.get('/', function(req, res){
   getPeople();
   var PQI = {};
 
-  var getPeople = function(PQI) {
+  var getPeople = function() {
     db.People.find({}, function(err, people){
       if (err) console.log(err);
       PQI.people = people;
     });
     getImages();
   };
-  var getImages = function(PQI) {
+  var getImages = function() {
     db.Img_link.find({}, function(err, imgLinks){
       if (err) console.log(err);
       PQI.imageLinks = imgLinks;
     });
     getQuotes();
   }
-  var getQuotes = function(PQI) {
+  var getQuotes = function() {
     db.Quote.find({}, function(err, quotes){
       if (err) console.log(err);
       PQI.quotes = quotes;
