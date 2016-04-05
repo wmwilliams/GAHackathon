@@ -13,13 +13,13 @@ router.get('/', function(req, res){
     if (err) console.log(err);
     PQI.people = people;
   });
-  db.Quote.find({}, function(err, quotes){
-    if (err) console.log(err);
-    PQI.quotes = quotes;
-  });
   db.Img_link.find({}, function(err, imgLinks){
     if (err) console.log(err);
     PQI.imageLinks = imgLinks;
+  });
+  db.Quote.find({}, function(err, quotes){
+    if (err) console.log(err);
+    PQI.quotes = quotes;
     return res.send(PQI)
   });
 });
