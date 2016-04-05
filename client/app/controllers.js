@@ -1,9 +1,6 @@
 angular.module('HackathonCtrls', ['DataServices'])
 .controller('HomeCtrl', ['$scope', 'AllData', function($scope, AllData) {
   $scope.data = {
-    people: {},
-    quotes: {},
-    imageLinks: {}
   };
 
   AllData.get(
