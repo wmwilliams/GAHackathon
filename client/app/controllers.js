@@ -6,19 +6,19 @@ angular.module('HackathonCtrls', ['DataServices'])
     function success(data, stuff){
 
       var jsonData = angular.fromJson(data);
+      console.log(jsonData);
       $scope.data.people = jsonData.people;
       $scope.data.quotes = jsonData.quotes;
       $scope.data.imageLinks = jsonData.imageLinks;
 
+      var randQuote = Math.floor((Math.random() * $scope.data.quotes.length) + 1);
+      $scope.quote = $scope.data.quotes[randQuote];
 
-        var randQuote = Math.floor((Math.random() * $scope.data.quotes.length) + 1);
-        $scope.quote = $scope.data.quotes[randQuote];
+      var randPerson = Math.floor((Math.random() * $scope.data.people.length) + 1);
+      $scope.person = $scope.data.people[randPerson];
 
-        var randPerson = Math.floor((Math.random() * $scope.data.people.length) + 1);
-        $scope.person = $scope.data.people[randPerson];
-
-        var randImage = Math.floor((Math.random() * $scope.data.imageLinks.length) + 1);
-        $scope.image = $scope.data.imageLinks[randImage];
+      var randImage = Math.floor((Math.random() * $scope.data.imageLinks.length) + 1);
+      $scope.image = $scope.data.imageLinks[randImage];
     },
     function error(data){
       console.log(data)
