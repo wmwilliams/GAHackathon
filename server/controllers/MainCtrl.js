@@ -20,10 +20,10 @@ router.get('/', function(req, res){
   db.Img_link.find({}, function(err, imgLinks){
     if (err) console.log(err);
     PQI.imageLinks = imgLinks;
+    if(PQI.imageLinks && PQI.people && PQI.quotes) {
+      return res.send(PQI);
+    }
   });
-  if(PQI.imageLinks && PQI.people && PQI.quotes) {
-    return res.send(PQI);
-  }
 });
 
 module.exports = router;
