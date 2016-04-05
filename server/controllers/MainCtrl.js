@@ -9,21 +9,21 @@ router.get('/', function(req, res){
 
   var PQI = {};
 
-    db.People.find({}, function(err, people){
-      PQI.people = people;
-      if (err) console.log(err);
-    });
-    db.Quote.find({}, function(err, quotes){
-      PQI.quotes = quotes;
-      if (err) console.log(err);
-    });
-    db.Img_link.find({}, function(err, imgLinks){
-      PQI.imageLinks = imgLinks;
-      if (err) console.log(err);
-    });
-    if(PQI.imageLinks && PQI.people && PQI.quotes) {
-      return res.send(PQI);
-    }
+  db.People.find({}, function(err, people){
+    if (err) console.log(err);
+    PQI.people = people;
+  });
+  db.Quote.find({}, function(err, quotes){
+    if (err) console.log(err);
+    PQI.quotes = quotes;
+  });
+  db.Img_link.find({}, function(err, imgLinks){
+    if (err) console.log(err);
+    PQI.imageLinks = imgLinks;
+  });
+  if(PQI.imageLinks && PQI.people && PQI.quotes) {
+    return res.send(PQI);
+  }
 });
 
 module.exports = router;
