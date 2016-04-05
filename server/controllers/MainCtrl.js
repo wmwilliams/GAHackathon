@@ -23,7 +23,8 @@ router.get('/', function(req, res){
       PQI.imageLinks = imgLinks;
     });
     return res.send(PQI);
-  }();
+  }
+  fromDatabase();
 
 });
 
