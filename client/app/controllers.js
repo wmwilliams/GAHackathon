@@ -6,7 +6,6 @@ angular.module('HackathonCtrls', ['DataServices'])
     function success(data, stuff){
 
       var jsonData = angular.fromJson(data);
-      console.log(jsonData);
       $scope.data.people = jsonData.people;
       $scope.data.quotes = jsonData.quotes;
       $scope.data.imageLinks = jsonData.imageLinks;
