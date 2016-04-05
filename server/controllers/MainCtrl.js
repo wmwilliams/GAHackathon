@@ -6,7 +6,6 @@ var router = express.Router();
 var db = require('../models/index');
 
 router.get('/', function(req, res){
-  getPeople();
   var PQI = {};
 
   var getPeople = function() {
@@ -15,7 +14,7 @@ router.get('/', function(req, res){
       PQI.people = people;
     });
     getImages();
-  };
+  }();
   var getImages = function() {
     db.Img_link.find({}, function(err, imgLinks){
       if (err) console.log(err);
@@ -30,7 +29,7 @@ router.get('/', function(req, res){
       return res.send(PQI)
     });
   }
-  console.log(getPeople())
+  console.log(PQI)
 });
 
 module.exports = router;
