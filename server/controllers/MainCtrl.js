@@ -9,23 +9,39 @@ router.get('/', function(req, res){
 
   var PQI = {};
 
-  var fromDatabase = function() {
-    db.People.find({}, function(err, people){
-      if (err) console.log(err);
-      PQI.people = people;
-    });
-    db.Quote.find({}, function(err, quotes){
-      if (err) console.log(err);
-      PQI.quotes = quotes;
-    });
-    db.Img_link.find({}, function(err, imgLinks){
-      if (err) console.log(err);
-      PQI.imageLinks = imgLinks;
-    });
-    return res.send(PQI);
-  }
-  fromDatabase();
+  db.People.find({}, function(err, people){
+    PQI.people = people;
+    if (err) console.log(err);
+  });
+  db.Quote.find({}, function(err, quotes){
+    PQI.quotes = quotes;
+    if (err) console.log(err);
+  });
+  db.Img_link.find({}, function(err, imgLinks){
+    PQI.imageLinks = imgLinks;
+    if (err) console.log(err);
+  });
 
+  if(PQI.imageLinks && PQI.people && PQI.quotes) {
+    return res.send(PQI);
+  } else if (!PQI.imageLInks) {
+    db.Img_link.find({}, function(err, imgLinks){
+      PQI.imageLinks = imgLinks;
+      if (err) console.log(err);
+    });
+  }
+  else if(!PQI.quotes) {
+    db.Img_link.find({}, function(err, imgLinks){
+      PQI.quotes = quotes;
+      if (err) console.log(err);
+    });
+  }
+  else if(!PQI.people) {
+    db.People.find({}, function(err, people){
+      PQI.people = people;
+      if (err) console.log(err);
+    });
+  }
 });
 
 module.exports = router;
