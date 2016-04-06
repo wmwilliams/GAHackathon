@@ -37,7 +37,7 @@ angular.module('HackathonCtrls', ['DataServices'])
 
   $scope.imageRefresh = function() {
     console.log('click');
-    $location.path('localhost:3000/api/picErase');
+    $location.path('htps://hackedquotes.herokuapp.com/api/picErase');
   }
 
 }]);

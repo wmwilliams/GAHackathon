@@ -22,6 +22,8 @@ router.get('/', function(req, res) {
           			if (err) console.log(err);
     	   		});
 			})
+                                console.log('CHECK CEHCK Check');
+                                res.redirect('/');
 		} else {
 			console.log('Error' + err)
 		}
