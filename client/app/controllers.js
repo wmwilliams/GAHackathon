@@ -1,5 +1,5 @@
 angular.module('HackathonCtrls', ['DataServices'])
-.controller('HomeCtrl', ['$scope', 'AllData', function($scope, AllData) {
+.controller('HomeCtrl', ['$scope', '$location', 'AllData', function($scope, $location, AllData) {
   $scope.data = {};
 
   AllData.get(
@@ -34,4 +34,10 @@ angular.module('HackathonCtrls', ['DataServices'])
       var randQuote = Math.floor((Math.random() * $scope.data.quotes.length) + 1);
       $scope.quote = $scope.data.quotes[randQuote];
   };
+
+  $scope.imageRefresh = function() {
+    console.log('click');
+    $location.path('localhost:3000/api/picErase');
+  }
+
 }]);
