@@ -1,6 +1,12 @@
 angular.module('HackathonCtrls', ['DataServices'])
 .controller('HomeCtrl', ['$scope', '$location', 'AllData', function($scope, $location, AllData) {
   $scope.data = {};
+      $scope.image = {
+        img_link: 'http://i.imgur.com/HFxrKvG.jpg'
+      };
+      $scope.quote = {
+        quote: "Welcome to HackedQuotes! Just click the picture to start randomly generating your funny quotes."
+      };
 
   AllData.get(
     function success(data, stuff){
@@ -14,12 +20,6 @@ angular.module('HackathonCtrls', ['DataServices'])
       // $scope.person = $scope.data.people[randPerson];
 
       // var randImage = Math.floor((Math.random() * $scope.data.imageLinks.length) + 1);
-      $scope.image = {
-        img_link: 'http://i.imgur.com/HFxrKvG.jpg'
-      };
-      $scope.quote = {
-        quote: "Welcome to HackedQuotes! Just click the picture to start randomly generating your funny quotes."
-      };
 
       // var randQuote = Math.floor((Math.random() * $scope.data.quotes.length) + 1);
       // $scope.quote = $scope.data.quotes[randQuote];
