@@ -5,8 +5,11 @@ angular.module('HackathonCtrls', ['DataServices'])
         img_link: 'http://i.imgur.com/HFxrKvG.jpg'
       };
       $scope.quote = {
-        quote: "Welcome to HackedQuotes! Just click the picture to start randomly generating your funny quotes."
+        quote: "Welcome to HackedQuotes! Just click the picture to start randomly generating your funny quotes. Enjoy!"
       };
+      $scope.person = {
+        full_name: "Website creators"
+      }
 
   AllData.get(
     function success(data, stuff){
