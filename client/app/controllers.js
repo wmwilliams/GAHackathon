@@ -10,9 +10,18 @@ angular.module('HackathonCtrls', ['DataServices'])
       $scope.data.quotes = jsonData.quotes;
       $scope.data.imageLinks = jsonData.imageLinks;
 
+      // var randPerson = Math.floor((Math.random() * $scope.data.people.length) + 1);
+      // $scope.person = $scope.data.people[randPerson];
+
+      // var randImage = Math.floor((Math.random() * $scope.data.imageLinks.length) + 1);
+      // $scope.image = $scope.data.imageLinks[randImage];
+
+      // var randQuote = Math.floor((Math.random() * $scope.data.quotes.length) + 1);
+      // $scope.quote = $scope.data.quotes[randQuote];
+
       var randImage = Math.floor((Math.random() * $scope.data.imageLinks.length) + 1);
-      $scope.image.image_link = 'http://i.imgur.com/HFxrKvG.jpg';
-      $scope.quote.quote = "Welcome to HackedQuotes! Just click the picture to start randomly generating your funny quotes.";
+      $scope.image = 'http://i.imgur.com/HFxrKvG.jpg';
+      $scope.quote = "Welcome to HackedQuotes! Just click the picture to start randomly generating your funny quotes.";
 
     },
     function error(data){
