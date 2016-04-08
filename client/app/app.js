@@ -1,5 +1,4 @@
-require('ng-error/ng-error');
-var app = angular.module('HackathonApp', ['ngRoute', 'HackathonCtrls', 'ng-Error']);
+var app = angular.module('HackathonApp', ['ngRoute', 'HackathonCtrls', 'ngError']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 $routeProvider

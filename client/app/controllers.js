@@ -1,4 +1,4 @@
-angular.module('HackathonCtrls', ['DataServices', 'ng-Error'])
+angular.module('HackathonCtrls', ['DataServices'])
 .controller('HomeCtrl', ['$scope', '$location', 'AllData', function($scope, $location, AllData) {
   $scope.data = {};
   $scope.image = {
