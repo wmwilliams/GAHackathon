@@ -1,4 +1,3 @@
-require('ng-error/ng-error');
 angular.module('HackathonCtrls', ['DataServices', 'ng-Error'])
 .controller('HomeCtrl', ['$scope', '$location', 'AllData', function($scope, $location, AllData) {
   $scope.data = {};
