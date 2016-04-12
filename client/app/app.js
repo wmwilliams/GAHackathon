@@ -1,4 +1,4 @@
-var app = angular.module('HackathonApp', ['ngRoute', 'HackathonCtrls']);
+var app = angular.module('HackathonApp', ['ngRoute', 'ngError', 'HackathonCtrls']);
 
 app.directive('ngError', ['$parse', function($parse){
     return {
