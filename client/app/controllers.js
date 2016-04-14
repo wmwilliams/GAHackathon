@@ -1,5 +1,5 @@
 angular.module('HackathonCtrls', ['DataServices'])
-.controller('HomeCtrl', ['$scope', '$location', 'AllData', function($scope, $location, AllData) {
+.controller('HomeCtrl', ['$scope', 'AllData', function($scope, AllData) {
   $scope.data = {};
   $scope.image = {
     img_link: 'http://i.imgur.com/HFxrKvG.jpg'
@@ -34,9 +34,11 @@ angular.module('HackathonCtrls', ['DataServices'])
       $scope.quote = $scope.data.quotes[randQuote];
   };
 
+  // $scope.imageRefresh = function() {
   $scope.imageRefresh = function() {
-    console.log('click');
-    $location.path('https://hackedquotes.herokuapp.com/api/picErase');
+    console.log('imageRefresh route function');
+    window.location.href = 'hackedquotes.herokuapp.com/api/picErase'
+    // window.location.href = 'localhost:3000/api/picErase';
   }
 
 }]);
